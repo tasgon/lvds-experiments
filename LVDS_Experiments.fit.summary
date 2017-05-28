@@ -1,17 +1,17 @@
-Fitter Status : Successful - Thu May 25 23:33:54 2017
+Fitter Status : Successful - Sat May 27 22:49:30 2017
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : LVDS_Experiments
 Top-level Entity Name : Baseline_CV_SoCKit
 Family : Cyclone V
 Device : 5CSXFC6D6F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 26 / 41,910 ( < 1 % )
-Total registers : 37
+Logic utilization (in ALMs) : 24 / 41,910 ( < 1 % )
+Total registers : 29
 Total pins : 21 / 499 ( 4 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 5,662,720 ( 0 % )
 Total RAM Blocks : 0 / 553 ( 0 % )
-Total DSP Blocks : 0 / 112 ( 0 % )
+Total DSP Blocks : 1 / 112 ( < 1 % )
 Total HSSI RX PCSs : 0 / 9 ( 0 % )
 Total HSSI PMA RX Deserializers : 0 / 9 ( 0 % )
 Total HSSI TX PCSs : 0 / 9 ( 0 % )

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for LVDS_Experiments
-Thu May 25 23:33:10 2017
+Sat May 27 22:49:00 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -13,12 +13,13 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
+  8. Analysis & Synthesis DSP Block Usage Summary
   9. General Register Statistics
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
- 13. Analysis & Synthesis Suppressed Messages
+ 10. Inverted Register Statistics
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
+ 14. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -45,17 +46,17 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu May 25 23:33:09 2017       ;
+; Analysis & Synthesis Status     ; Successful - Sat May 27 22:49:00 2017       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; LVDS_Experiments                            ;
 ; Top-level Entity Name           ; Baseline_CV_SoCKit                          ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 29                                          ;
+; Total registers                 ; 25                                          ;
 ; Total pins                      ; 21                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
+; Total DSP Blocks                ; 1                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
@@ -157,15 +158,15 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -183,25 +184,25 @@ agreement for further details.
 +---------------------------------------------+------------------+
 ; Resource                                    ; Usage            ;
 +---------------------------------------------+------------------+
-; Estimate of Logic utilization (ALMs needed) ; 27               ;
+; Estimate of Logic utilization (ALMs needed) ; 21               ;
 ;                                             ;                  ;
-; Combinational ALUT usage for logic          ; 46               ;
+; Combinational ALUT usage for logic          ; 37               ;
 ;     -- 7 input functions                    ; 0                ;
-;     -- 6 input functions                    ; 8                ;
-;     -- 5 input functions                    ; 1                ;
-;     -- 4 input functions                    ; 2                ;
-;     -- <=3 input functions                  ; 35               ;
+;     -- 6 input functions                    ; 4                ;
+;     -- 5 input functions                    ; 6                ;
+;     -- 4 input functions                    ; 3                ;
+;     -- <=3 input functions                  ; 24               ;
 ;                                             ;                  ;
-; Dedicated logic registers                   ; 29               ;
+; Dedicated logic registers                   ; 25               ;
 ;                                             ;                  ;
 ; I/O pins                                    ; 21               ;
 ;                                             ;                  ;
-; Total DSP Blocks                            ; 0                ;
+; Total DSP Blocks                            ; 1                ;
 ;                                             ;                  ;
 ; Maximum fan-out node                        ; OSC_50_B8A~input ;
 ; Maximum fan-out                             ; 25               ;
-; Total fan-out                               ; 241              ;
-; Average fan-out                             ; 2.06             ;
+; Total fan-out                               ; 179              ;
+; Average fan-out                             ; 1.70             ;
 +---------------------------------------------+------------------+
 
 
@@ -210,19 +211,21 @@ agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name        ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------------+--------------+
-; |Baseline_CV_SoCKit        ; 46 (46)             ; 29 (29)                   ; 0                 ; 0          ; 21   ; 0            ; |Baseline_CV_SoCKit ; Baseline_CV_SoCKit ; work         ;
+; |Baseline_CV_SoCKit        ; 37 (37)             ; 25 (25)                   ; 0                 ; 1          ; 21   ; 0            ; |Baseline_CV_SoCKit ; Baseline_CV_SoCKit ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; state[1]                              ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 1 ;                                        ;
-+---------------------------------------+----------------------------------------+
++-----------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary  ;
++---------------------------------+-------------+
+; Statistic                       ; Number Used ;
++---------------------------------+-------------+
+; Two Independent 18x18           ; 1           ;
+; Total number of DSP blocks      ; 1           ;
+;                                 ;             ;
+; Fixed Point Unsigned Multiplier ; 1           ;
++---------------------------------+-------------+
 
 
 +------------------------------------------------------+
@@ -230,8 +233,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 29    ;
-; Number of registers using Synchronous Clear  ; 20    ;
+; Total registers                              ; 25    ;
+; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -240,28 +243,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; state                                  ; 2       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 29                          ;
-;     SCLR              ; 20                          ;
-;     plain             ; 9                           ;
-; arriav_lcell_comb     ; 46                          ;
-;     arith             ; 24                          ;
-;         1 data inputs ; 24                          ;
-;     normal            ; 22                          ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 9                           ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 2                           ;
-;         5 data inputs ; 1                           ;
-;         6 data inputs ; 8                           ;
+; arriav_ff             ; 25                          ;
+;     plain             ; 25                          ;
+; arriav_lcell_comb     ; 39                          ;
+;     arith             ; 23                          ;
+;         1 data inputs ; 22                          ;
+;         2 data inputs ; 1                           ;
+;     normal            ; 16                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 2                           ;
+;         4 data inputs ; 3                           ;
+;         5 data inputs ; 6                           ;
+;         6 data inputs ; 4                           ;
+; arriav_mac            ; 1                           ;
 ; boundary_port         ; 21                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.30                        ;
-; Average LUT depth     ; 2.69                        ;
+; Max LUT depth         ; 3.20                        ;
+; Average LUT depth     ; 2.54                        ;
 +-----------------------+-----------------------------+
 
 
@@ -280,33 +293,47 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Thu May 25 23:32:57 2017
+    Info: Processing started: Sat May 27 22:48:52 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LVDS_Experiments -c LVDS_Experiments
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Warning (12125): Using design file baseline_cv_sockit.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: Baseline_CV_SoCKit File: C:/Users/myself/Code/FPGA/lvds-experiments/baseline_cv_sockit.v Line: 5
+    Info (12023): Found entity 1: Baseline_CV_SoCKit File: C:/Users/myself/Code/FPGA/lvds-experiments/baseline_cv_sockit.v Line: 7
 Info (12127): Elaborating entity "Baseline_CV_SoCKit" for the top level hierarchy
-Warning (10235): Verilog HDL Always Construct warning at baseline_cv_sockit.v(50): variable "data" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/myself/Code/FPGA/lvds-experiments/baseline_cv_sockit.v Line: 50
-Warning (10235): Verilog HDL Always Construct warning at baseline_cv_sockit.v(51): variable "data" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/myself/Code/FPGA/lvds-experiments/baseline_cv_sockit.v Line: 51
-Warning (10270): Verilog HDL Case Statement warning at baseline_cv_sockit.v(49): incomplete case statement has no default case item File: C:/Users/myself/Code/FPGA/lvds-experiments/baseline_cv_sockit.v Line: 49
+Warning (10230): Verilog HDL assignment warning at baseline_cv_sockit.v(60): truncated value with size 32 to match size of target (24) File: C:/Users/myself/Code/FPGA/lvds-experiments/baseline_cv_sockit.v Line: 60
+Warning (10235): Verilog HDL Always Construct warning at baseline_cv_sockit.v(67): variable "data" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/myself/Code/FPGA/lvds-experiments/baseline_cv_sockit.v Line: 67
+Warning (10235): Verilog HDL Always Construct warning at baseline_cv_sockit.v(68): variable "data" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/myself/Code/FPGA/lvds-experiments/baseline_cv_sockit.v Line: 68
+Warning (10034): Output port "LED" at baseline_cv_sockit.v(14) has no driver File: C:/Users/myself/Code/FPGA/lvds-experiments/baseline_cv_sockit.v Line: 14
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HSMC_TX_p[1]" is stuck at GND File: C:/Users/myself/Code/FPGA/lvds-experiments/baseline_cv_sockit.v Line: 12
+    Warning (13410): Pin "HSMC_TX_p[2]" is stuck at GND File: C:/Users/myself/Code/FPGA/lvds-experiments/baseline_cv_sockit.v Line: 12
+    Warning (13410): Pin "HSMC_TX_p[3]" is stuck at GND File: C:/Users/myself/Code/FPGA/lvds-experiments/baseline_cv_sockit.v Line: 12
+    Warning (13410): Pin "HSMC_TX_n[1]" is stuck at GND File: C:/Users/myself/Code/FPGA/lvds-experiments/baseline_cv_sockit.v Line: 13
+    Warning (13410): Pin "HSMC_TX_n[2]" is stuck at GND File: C:/Users/myself/Code/FPGA/lvds-experiments/baseline_cv_sockit.v Line: 13
+    Warning (13410): Pin "HSMC_TX_n[3]" is stuck at GND File: C:/Users/myself/Code/FPGA/lvds-experiments/baseline_cv_sockit.v Line: 13
+    Warning (13410): Pin "LED[0]" is stuck at GND File: C:/Users/myself/Code/FPGA/lvds-experiments/baseline_cv_sockit.v Line: 14
+    Warning (13410): Pin "LED[1]" is stuck at GND File: C:/Users/myself/Code/FPGA/lvds-experiments/baseline_cv_sockit.v Line: 14
+    Warning (13410): Pin "LED[2]" is stuck at GND File: C:/Users/myself/Code/FPGA/lvds-experiments/baseline_cv_sockit.v Line: 14
+    Warning (13410): Pin "LED[3]" is stuck at GND File: C:/Users/myself/Code/FPGA/lvds-experiments/baseline_cv_sockit.v Line: 14
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/myself/Code/FPGA/lvds-experiments/LVDS_Experiments.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 3 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/myself/Code/FPGA/lvds-experiments/baseline_cv_sockit.v Line: 7
-    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/myself/Code/FPGA/lvds-experiments/baseline_cv_sockit.v Line: 7
-    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/myself/Code/FPGA/lvds-experiments/baseline_cv_sockit.v Line: 7
-Info (21057): Implemented 67 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 4 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/myself/Code/FPGA/lvds-experiments/baseline_cv_sockit.v Line: 9
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/myself/Code/FPGA/lvds-experiments/baseline_cv_sockit.v Line: 9
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/myself/Code/FPGA/lvds-experiments/baseline_cv_sockit.v Line: 9
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/myself/Code/FPGA/lvds-experiments/baseline_cv_sockit.v Line: 9
+Info (21057): Implemented 59 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
     Info (21059): Implemented 12 output pins
-    Info (21061): Implemented 46 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 696 megabytes
-    Info: Processing ended: Thu May 25 23:33:10 2017
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:27
+    Info (21061): Implemented 37 logic cells
+    Info (21062): Implemented 1 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 720 megabytes
+    Info: Processing ended: Sat May 27 22:49:00 2017
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:18
 
 
 +------------------------------------------+

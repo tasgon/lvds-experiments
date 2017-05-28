@@ -1,5 +1,5 @@
 Assembler report for LVDS_Experiments
-Thu May 25 23:34:03 2017
+Sat May 27 22:49:37 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu May 25 23:34:03 2017 ;
+; Assembler Status      ; Successful - Sat May 27 22:49:37 2017 ;
 ; Revision Name         ; LVDS_Experiments                      ;
 ; Top-level Entity Name ; Baseline_CV_SoCKit                    ;
 ; Family                ; Cyclone V                             ;
@@ -67,8 +67,8 @@ agreement for further details.
 +----------------+--------------------------------------------------------------------------+
 ; Option         ; Setting                                                                  ;
 +----------------+--------------------------------------------------------------------------+
-; JTAG usercode  ; 0x00B03C2A                                                               ;
-; Checksum       ; 0x00B03C2A                                                               ;
+; JTAG usercode  ; 0x00AFF89C                                                               ;
+; Checksum       ; 0x00AFF89C                                                               ;
 +----------------+--------------------------------------------------------------------------+
 
 
@@ -78,14 +78,14 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Thu May 25 23:33:56 2017
+    Info: Processing started: Sat May 27 22:49:32 2017
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off LVDS_Experiments -c LVDS_Experiments
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 720 megabytes
-    Info: Processing ended: Thu May 25 23:34:03 2017
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Processing ended: Sat May 27 22:49:37 2017
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:05
 
 

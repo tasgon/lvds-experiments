@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at baseline_cv_sockit.v(46): always construct contains both blocking and non-blocking assignments File: C:/Users/myself/Code/FPGA/lvds-experiments/baseline_cv_sockit.v Line: 46
+Warning (10268): Verilog HDL information at baseline_cv_sockit.v(72): always construct contains both blocking and non-blocking assignments File: C:/Users/myself/Code/FPGA/lvds-experiments/baseline_cv_sockit.v Line: 72
